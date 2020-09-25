@@ -11,7 +11,7 @@ const forecast=(lat,long,callback)=>{
         }
         else{
             
-            callback(undefined,body.current.weather[0].main+". It is currently "+body.current.temp+"\u2103 . The high today is "+body.daily[0].temp.max+"\u2103. The low today is "+body.daily[0].temp.min+"\u2103. There is a "+body.daily[0].pop+"% of chance of precipitaion.")
+            callback(undefined,body.current.weather[0].main+". It is currently "+body.current.temp+"\u2103 . The high today is "+body.daily[0].temp.max+"\u2103. The low today is "+body.daily[0].temp.min+"\u2103. There is a "+body.daily[0].pop*100+"% of chance of precipitaion.")
         }
     })
 
