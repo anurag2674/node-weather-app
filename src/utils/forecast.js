@@ -10,7 +10,7 @@ const forecast=(lat,long,callback)=>{
             callback("Unable to find location. Try another search",undefined)
         }
         else{
-            callback(undefined,body.current.weather[0].description+". It is currently "+body.current.temp)
+            callback(undefined,body.current.weather[0].description+". It is currently "+body.current.temp+". The high today is "+body.daily[0].temp.max+". The low today is"+body.daily[0].temp.min+". There is a "+body.daily[0].pop+"% of chance of rain")
         }
     })
 
